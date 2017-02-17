@@ -1,9 +1,9 @@
 class CfgPatches
 {
-	class Celoush_Weapon
+	class Celoush_Weapons
 	{
 		author = "celoush";
-		requiredAddons[] = {};
+		requiredAddons[] = {"A3_Weapons_F_Rifles_MX"};
 		requiredVersion = 0.1;
 		units[] = {};
 		weapons[] = {};
@@ -16,13 +16,21 @@ class CfgWeapons
 {
 	class arifle_MX_RCO_pointer_snds_F;
 
-	class celoush_arifle_MX_RCO_pointer_snds_F: arifle_MX_RCO_pointer_snds_F
+	class celoush_arifle_MX_RCO_pointer_snds_F_base: arifle_MX_RCO_pointer_snds_F
 	{
+		class FullAuto;
+
 		displayName = "Celoush's MX";
-		accuracy = 0.19;
-		armor = 190;
-		maxRecoilSway = 0.01;
-		swayDecaySpeed = 1.15;		
-	}
+		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
+	};
+
+	class celoush_arifle_MX_RCO_pointer_snds_F: celoush_arifle_MX_RCO_pointer_snds_F_base
+	{
+		class FullAuto: FullAuto
+		{
+			reloadTime = 0.086;
+			dispersion = 0.00089;
+		}
+	};
 
 }
