@@ -23,10 +23,12 @@ class CfgWeapons
 
 	class celoush_arifle_MX_RCO_pointer_snds_F: celoush_arifle_MX_RCO_pointer_snds_F_base
 	{
+		
+		displayName = "Celoush's MX";
+		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
+
 		class FullAuto: FullAuto
 		{
-			displayName = "Celoush's MX";
-			magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
 			reloadTime = 0.086;
 			dispersion = 0.00089;
 		}
